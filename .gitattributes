@@ -1,0 +1,12 @@
+# Normalize text line endings
+* text=auto
+
+# Binary CAD / print files: no diffs, no line-ending conversion
+*.FCStd binary
+*.stl    binary
+*.step   binary
+*.stp    binary
+*.3mf    binary
+*.pdf    binary
+*.png    binary
+*.jpg    binary

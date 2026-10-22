@@ -1,0 +1,35 @@
+# Build output
+build/
+*.elf
+*.bin
+*.hex
+*.map
+*.o
+*.d
+*.su
+
+# Editor / tools (launch.json and tasks.json stay tracked)
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+.cache/
+compile_commands.json
+
+# Claude Code local settings (agents stay tracked)
+.claude/settings.local.json
+
+# FreeCAD backups
+*.FCBak
+*.FCStd1
+
+# Slicer output
+*.gcode
+*.3mf.bak
+
+# Python
+__pycache__/
+.venv/
+
+# OS
+Thumbs.db
+desktop.ini
