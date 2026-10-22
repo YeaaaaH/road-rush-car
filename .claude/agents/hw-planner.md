@@ -18,4 +18,15 @@ When checking wiring, verify:
 - Current: GPIO and regulator limits vs load. Motor stall current vs driver rating.
 - The Bluetooth module's voltage: the module board vs the bare module, and whether its RX accepts 3.3 V.
 
+Power budget (battery runtime):
+- Runtime ≈ usable capacity (mAh) ÷ average current (mA). Average = Σ(t_i × I_i) ÷ period, over a realistic driving cycle (cruise, acceleration, idle).
+- For the car, the motors dominate. Use the measured or datasheet running current under load, and size the wiring, fuse and driver for the **stall current**, not the running current. The MCU and radio are a rounding error by comparison.
+- Use usable capacity, not the label: derate for Li-ion cutoff voltage, regulator efficiency (buck ~85–90%, LDO = Vout/Vin) and cheap-cell overrating.
+
+Sensor truth:
+- For every sensor, state what it **physically measures** and how that differs from the quantity we want. Examples: HC-SR04 measures echo time, so soft or angled surfaces read wrong or not at all. An IR line sensor measures reflectance, so ambient light shifts it. An IMU gyro measures rate, not angle, so the integrated angle drifts. Plan the firmware around what is really measurable.
+
+Part suggestions:
+- Suggest parts the user can actually buy where they shop (region and stores in `CLAUDE.md`). If that's unknown, ask before recommending something to buy.
+
 Output: a wiring table (signal | MCU pin | AF | module pin | notes), then the problems found, each with the datasheet reference and a fix. Don't write files. The main session decides what goes into `docs/`.

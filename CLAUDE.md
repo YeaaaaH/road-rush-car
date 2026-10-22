@@ -7,6 +7,19 @@ A radio-controlled robot car built from scratch: firmware, wiring and a 3D-print
 - Learn and understand every peripheral from the reference manual.
 - Later: a **custom PCB** with a smaller chip from the same family (candidate: STM32G431CB, LQFP48, same G4 registers), carrying only the peripherals the car needs.
 
+## Stages
+1. **Breadboard MVP**: Nucleo + Blue Pill + modules on wires. Done when the car drives from the remote.
+2. **Engineering prototype**: printed chassis, wiring tidied (perfboard or connectors), power system final, runtime measured.
+3. **Custom PCB**: KiCad, STM32G431-class chip, SWD header, only the needed peripherals. Firmware ported from the Nucleo.
+
+Work on the current stage. Bring up the next one only when the current one's exit criteria are met or the user asks.
+
+## Planning rule
+Every plan or design proposal ends with its **2–4 biggest risks**, one line each (power, flashing/debug access, parts availability, mechanical fit, learning curve...).
+
+## Parts sourcing
+Region and stores: *unknown, ask the user.*
+
 ## Hardware (known so far)
 
 | Role | Part | Notes |

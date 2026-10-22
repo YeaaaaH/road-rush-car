@@ -8,6 +8,7 @@ Pin assignments for both boards, chosen so that the car's pins also exist on the
 ## Done when
 - [ ] Car: motor PWM timer channels and direction GPIOs, radio UART/SPI, sensors, debug UART (the VCP)
 - [ ] Remote: joystick ADC channels, buttons, radio, LED
+- [ ] **Failsafe requirement noted:** if no packet arrives from the remote within N ms, the car stops the motors
 - [ ] PA13/PA14 (SWD) kept free on both boards
 - [ ] 5 V-tolerant (FT) pins checked against the datasheet for any 5 V signal
 - [ ] Checked for conflicts in CubeMX (planning only)
