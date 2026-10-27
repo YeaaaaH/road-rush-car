@@ -1,4 +1,4 @@
-# T-003: Finish dev environment setup
+# T-002: Finish dev environment setup
 **Status:** todo
 **Depends on:** user approval for each install
 
@@ -8,8 +8,8 @@ Everything needed to edit, build, flash, debug and model.
 ## Done when
 - [ ] VS Code extensions: `ms-vscode.cpptools`, `ms-vscode.cmake-tools`, `marus25.cortex-debug`, `ms-vscode.vscode-serial-monitor`
 - [ ] ST-LINK driver confirmed (Device Manager shows "STMicroelectronics STLink Virtual COM Port" with the Nucleo plugged in)
-- [ ] CMSIS: ARM CMSIS Core + ST `cmsis-device-g4` + `cmsis-device-f1` (vendored into the project, versions recorded)
-- [ ] SVD files: `STM32G474.svd`, `STM32F103.svd`
+- [ ] CMSIS: ARM CMSIS Core + ST `cmsis-device-g4` + `cmsis-device-f4` (vendored into the project, versions recorded)
+- [ ] SVD files: `STM32G474.svd`, `STM32F411.svd`
 - [ ] FreeCAD 1.x
 - [ ] Slicer for the user's printer
 - [ ] Optional: Python + build123d (only for Claude's own geometry checks)

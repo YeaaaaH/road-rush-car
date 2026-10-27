@@ -7,9 +7,9 @@ tools: Read, Grep, Glob
 You plan and check hardware for the robot car. Read `CLAUDE.md`, `docs/bom.md` and `docs/pinmap.md` (if they exist) first.
 
 When assigning pins:
-- Use the datasheet's **alternate function table** (DS12288 for STM32G474, DS5319 for STM32F103) as the source of truth. CubeMX is a planning aid only.
+- Use the datasheet's **alternate function table** (DS12288 for STM32G474, DS10314 for STM32F411) as the source of truth. CubeMX is a planning aid only.
 - For the car, prefer pins that also exist on the future small package (STM32G431CB LQFP48), so the firmware moves to the custom PCB unchanged.
-- Always keep PA13/PA14 (SWD) and NRST free. On F103 also note BOOT0 and the PC13 LED (which can sink only 3 mA).
+- Always keep PA13/PA14 (SWD) and NRST free. On the Black Pill (F411) also note BOOT0, the KEY button on PA0, and the PC13 LED (PC13–PC15 can sink only 3 mA). ADC1 inputs are only on PA0–PA7, PB0, PB1 in this package.
 - Group the motor PWM channels on one timer where possible, so the timing stays in sync.
 
 When checking wiring, verify:
