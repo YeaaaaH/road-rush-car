@@ -10,3 +10,7 @@
 *.pdf    binary
 *.png    binary
 *.jpg    binary
+
+# Vendored third-party files: not counted in GitHub language stats, no text diffs
+third_party/** linguist-vendored -diff
+third_party/README.md -linguist-vendored diff
